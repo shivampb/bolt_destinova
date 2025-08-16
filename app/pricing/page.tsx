@@ -56,7 +56,7 @@ export default function PricingPage() {
           </div>
           <div className="p-6">
             <a
-              href="#"
+              href="https://apps.shopify.com/desti-ai-automate-chatbot"
               className="block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
             >
               Get started
@@ -133,7 +133,7 @@ export default function PricingPage() {
           </div>
            <div className="p-6">
             <a
-              href="#"
+              href="https://apps.shopify.com/desti-ai-automate-chatbot"
               className="block w-full bg-[#FF7626] border border-[#FF7626] rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-[#FF7626]/90"
             >
               Start free trial
@@ -210,7 +210,7 @@ export default function PricingPage() {
           </div>
            <div className="p-6">
             <a
-              href="#"
+              href="https://apps.shopify.com/desti-ai-automate-chatbot"
               className="block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
             >
               Start free trial

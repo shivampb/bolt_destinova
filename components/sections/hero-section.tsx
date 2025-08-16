@@ -52,6 +52,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 className="bg-[#FF7626] hover:bg-[#FF7626]/90 text-white px-8 py-4 text-lg font-medium group"
+                onClick={() => window.location.href = '/demo-form'}
               >
                 Book a Live Demo
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -60,9 +61,10 @@ export function HeroSection() {
                 variant="outline"
                 size="lg"
                 className="px-8 py-4 text-lg font-medium border-slate-300 text-slate-700 hover:bg-slate-50 group"
+                onClick={() => window.open("https://apps.shopify.com/desti-ai-automate-chatbot", "_blank")}
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Try Interactive Demo
+                Start Free Trail
               </Button>
             </div>
 
