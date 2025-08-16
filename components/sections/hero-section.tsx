@@ -18,7 +18,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-9">
             <div className="inline-flex items-center space-x-2 bg-[#FF7626]/10 text-[#FF7626] px-4 py-2 rounded-full text-sm font-medium">
               <Sparkles className="h-4 w-4" />
               <span>AI-Powered Product Discovery</span>
@@ -28,7 +28,7 @@ export function HeroSection() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                 AI Chatbots For{" "}
                 <span className="text-[#FF7626] relative">
-                  sell
+                  product
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-[#FF7626]/20"
                     viewBox="0 0 100 10"
@@ -37,7 +37,7 @@ export function HeroSection() {
                     <path d="M0,8 Q50,0 100,8 L100,10 L0,10 Z" />
                   </svg>
                 </span>
-                product Recommendation in seconds.
+                recommendation
               </h1>
 
               <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
