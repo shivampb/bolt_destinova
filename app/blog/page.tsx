@@ -41,10 +41,6 @@ export default function BlogComingSoon() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="absolute bottom-6 text-gray-500 text-sm">
-        © {new Date().getFullYear()} Destinova AI Labs. All rights reserved.
-      </footer>
     </div>
   );
 }

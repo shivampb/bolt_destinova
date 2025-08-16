@@ -81,15 +81,10 @@ export function Footer() {
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
+          {/* Logo */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 group mb-4">
-              <div className="w-8 h-8 bg-[#FF7626] rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:scale-105 transition-transform duration-200">
-                D
-              </div>
-              <span className="text-xl font-bold text-white group-hover:text-[#FF7626] transition-colors duration-200">
-                Destinova AI Labs
-              </span>
+            <Link href="/" className="flex items-center mb-4">
+              <img src="https://destinovaailabs.com/wp-content/uploads/2025/06/logo.png" alt="Destinova AI Labs Logo" className="h-8 w-auto" />
             </Link>
             <p className="text-slate-300 mb-6 max-w-md">
               Agentic AI chatbots that boost eCommerce conversions with intelligent product recommendations.
