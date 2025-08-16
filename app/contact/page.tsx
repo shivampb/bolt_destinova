@@ -44,11 +44,11 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center space-x-4">
                 <Mail className="w-6 h-6 text-[#ff7626]" />
-                <span className="text-gray-700">business@destinovaailabs.com</span>
+                <span className="text-gray-700">business@destinovaailabs.in</span>
               </div>
               <div className="flex items-center space-x-4">
                 <MapPin className="w-6 h-6 text-[#ff7626]" />
-                <span className="text-gray-700">Ahmedabad, India</span>
+                <span className="text-gray-700">India</span>
               </div>
             </div>
           </div>
