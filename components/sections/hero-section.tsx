@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Play, ArrowRight, Sparkles } from 'lucide-react';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Play, ArrowRight, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -23,10 +23,10 @@ export function HeroSection() {
               <Sparkles className="h-4 w-4" />
               <span>AI-Powered Product Discovery</span>
             </div>
-            
+
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-                AI Chatbots that{' '}
+                AI Chatbots For{" "}
                 <span className="text-[#FF7626] relative">
                   sell
                   <svg
@@ -37,26 +37,28 @@ export function HeroSection() {
                     <path d="M0,8 Q50,0 100,8 L100,10 L0,10 Z" />
                   </svg>
                 </span>
-                —personalized product picks in seconds.
+                product Recommendation in seconds.
               </h1>
-              
+
               <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-                Destinova AI Labs helps eCommerce brands lift conversions with conversational product discovery—on web and chat. Turn every visitor into a buyer with intelligent recommendations.
+                Destinova AI Labs helps eCommerce brands lift conversions with
+                conversational product discovery—on web and chat. Turn every
+                visitor into a buyer with intelligent recommendations.
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-[#FF7626] hover:bg-[#FF7626]/90 text-white px-8 py-4 text-lg font-medium group"
               >
                 Book a Live Demo
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
+              <Button
+                variant="outline"
+                size="lg"
                 className="px-8 py-4 text-lg font-medium border-slate-300 text-slate-700 hover:bg-slate-50 group"
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
@@ -68,7 +70,9 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-8 pt-4">
               <div className="text-center sm:text-left">
                 <div className="text-2xl font-bold text-[#FF7626]">+28%</div>
-                <div className="text-sm text-slate-600">Average Order Value</div>
+                <div className="text-sm text-slate-600">
+                  Average Order Value
+                </div>
               </div>
               <div className="text-center sm:text-left">
                 <div className="text-2xl font-bold text-[#FF7626]">+19%</div>
@@ -92,7 +96,9 @@ export function HeroSection() {
                       <span className="text-white text-sm font-bold">D</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-slate-900">Destinova AI</div>
+                      <div className="font-semibold text-slate-900">
+                        Destinova AI
+                      </div>
                       <div className="text-xs text-green-500 flex items-center">
                         <div className="w-2 h-2 bg-green-500 rounded-full mr-1"></div>
                         Online
@@ -109,7 +115,8 @@ export function HeroSection() {
                     </div>
                     <div className="bg-slate-100 rounded-2xl rounded-tl-lg px-4 py-3 max-w-xs">
                       <p className="text-sm text-slate-800">
-                        Hi! I'm here to help you find the perfect product. What are you looking for today?
+                        Hi! I'm here to help you find the perfect product. What
+                        are you looking for today?
                       </p>
                     </div>
                   </div>
@@ -131,15 +138,22 @@ export function HeroSection() {
                     </div>
                     <div className="bg-slate-100 rounded-2xl rounded-tl-lg px-4 py-3 max-w-xs">
                       <p className="text-sm text-slate-800 mb-2">
-                        Perfect! Based on your needs, I recommend the MacBook Pro 16". Here's why:
+                        Perfect! Based on your needs, I recommend the MacBook
+                        Pro 16". Here's why:
                       </p>
                       <div className="bg-white rounded-lg p-3 border">
                         <div className="flex items-center space-x-3">
                           <div className="w-12 h-12 bg-slate-200 rounded-lg"></div>
                           <div>
-                            <div className="font-medium text-sm">MacBook Pro 16"</div>
-                            <div className="text-xs text-slate-600">M3 Pro, 18GB RAM</div>
-                            <div className="text-sm font-bold text-[#FF7626]">$2,499</div>
+                            <div className="font-medium text-sm">
+                              MacBook Pro 16"
+                            </div>
+                            <div className="text-xs text-slate-600">
+                              M3 Pro, 18GB RAM
+                            </div>
+                            <div className="text-sm font-bold text-[#FF7626]">
+                              $2,499
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -150,8 +164,14 @@ export function HeroSection() {
                 <div className="flex items-center justify-center pt-2">
                   <div className="flex space-x-1">
                     <div className="w-2 h-2 bg-[#FF7626] rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-[#FF7626] rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-[#FF7626] rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    <div
+                      className="w-2 h-2 bg-[#FF7626] rounded-full animate-bounce"
+                      style={{ animationDelay: "0.1s" }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-[#FF7626] rounded-full animate-bounce"
+                      style={{ animationDelay: "0.2s" }}
+                    ></div>
                   </div>
                 </div>
               </div>
