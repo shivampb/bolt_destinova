@@ -9,10 +9,9 @@ import { Menu, X } from "lucide-react";
 const navigation = [
   { name: "Product", href: "/product" },
   { name: "Solutions", href: "/solutions" },
-  { name: "How It Works", href: "/how-it-works" },
   { name: "Pricing", href: "/pricing" },
-  { name: "Case Studies", href: "/case-studies" },
   { name: "Blog", href: "/blog" },
+  { name: "Collaborate", href: "/collaborate" },
 ];
 
 export function Header() {
@@ -29,11 +28,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200/80"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 w-full z-50 bg-white shadow-lg border-b border-slate-200/80"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -70,17 +65,10 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-3">
             <Button
-              variant="ghost"
-              asChild
-              className="text-slate-700 hover:text-[#FF7626]"
-            >
-              <Link href="/contact">Try Demo</Link>
-            </Button>
-            <Button
               asChild
               className="bg-[#FF7626] hover:bg-[#FF7626]/90 text-white"
             >
-              <Link href="/contact">Book Live Demo</Link>
+              <Link href="/demo-form">Book Live Demo</Link>
             </Button>
           </div>
 
@@ -128,7 +116,7 @@ export function Header() {
                     asChild
                     className="bg-[#FF7626] hover:bg-[#FF7626]/90 text-white justify-start"
                   >
-                    <Link href="/contact" onClick={() => setIsOpen(false)}>
+                    <Link href="/demo-form" onClick={() => setIsOpen(false)}>
                       Book Live Demo
                     </Link>
                   </Button>
