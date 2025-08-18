@@ -45,7 +45,7 @@ const HeroSection = () => {
               size="lg" 
               className="bg-[#FF7626] hover:bg-[#e6651f] text-white text-lg px-8 py-3 h-auto"
             >
-              <Link href="/book-demo" className="flex items-center gap-2">
+              <Link href="/demo-form" className="flex items-center gap-2">
                 See Solutions in Action
                 <ArrowRight size={20} />
               </Link>
@@ -56,7 +56,7 @@ const HeroSection = () => {
               size="lg"
               className="border-slate-300 text-slate-700 hover:bg-slate-50 text-lg px-8 py-3 h-auto"
             >
-              <Link href="/case-studies">
+              <Link href="/blog">
                 View Case Studies
               </Link>
             </Button>

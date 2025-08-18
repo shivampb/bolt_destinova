@@ -27,7 +27,7 @@ const CTASection = () => {
               size="lg" 
               className="bg-[#FF7626] hover:bg-[#e6651f] text-white text-lg px-8 py-4 h-auto"
             >
-              <Link href="/book-demo" className="flex items-center gap-2">
+              <Link href="/demo-form" className="flex items-center gap-2">
                 <Calendar size={20} />
                 Book a Live Demo
                 <ArrowRight size={20} />
@@ -39,9 +39,9 @@ const CTASection = () => {
               size="lg"
               className="border-slate-300 text-white hover:bg-white hover:text-slate-900 text-lg px-8 py-4 h-auto bg-transparent"
             >
-              <Link href="/interactive-demo" className="flex items-center gap-2">
+              <Link href="https://apps.shopify.com/desti-ai-automate-chatbot" className="flex items-center gap-2">
                 <Play size={20} />
-                Try Interactive Demo
+                Try Solution Now
               </Link>
             </Button>
           </div>
@@ -50,7 +50,7 @@ const CTASection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-2xl font-bold text-[#FF7626] mb-2">
-                24-48 hours
+                24-48 minute
               </div>
               <div className="text-slate-300 text-sm">
                 Average setup time

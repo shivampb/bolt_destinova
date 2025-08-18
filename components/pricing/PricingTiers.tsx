@@ -169,7 +169,7 @@ const PricingTiers = () => {
                 }`}
               >
                 <Link 
-                  href={plan.cta === 'Contact Sales' ? '/contact' : '/book-demo'}
+                  href={plan.cta === 'Contact Sales' ? '/contact' : 'https://apps.shopify.com/desti-ai-automate-chatbot'}
                   className="flex items-center justify-center gap-2"
                 >
                   {plan.cta}

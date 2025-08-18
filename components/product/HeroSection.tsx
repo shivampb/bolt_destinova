@@ -45,8 +45,8 @@ const HeroSection = () => {
               size="lg" 
               className="bg-[#FF7626] hover:bg-[#e6651f] text-white text-lg px-8 py-3 h-auto"
             >
-              <Link href="/book-demo" className="flex items-center gap-2">
-                See Live Demo
+              <Link href="/demo-form" className="flex items-center gap-2">
+                Book Live Demo
                 <ArrowRight size={20} />
               </Link>
             </Button>
@@ -56,8 +56,8 @@ const HeroSection = () => {
               size="lg"
               className="border-slate-300 text-slate-700 hover:bg-slate-50 text-lg px-8 py-3 h-auto"
             >
-              <Link href="/interactive-demo">
-                Try Interactive Demo
+              <Link href="https://apps.shopify.com/desti-ai-automate-chatbot">
+                Explore product
               </Link>
             </Button>
           </div>

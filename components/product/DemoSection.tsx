@@ -123,13 +123,13 @@ const DemoSection = () => {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button asChild className="bg-[#FF7626] hover:bg-[#e6651f] text-white">
-                    <Link href="/interactive-demo" className="flex items-center gap-2">
+                    <Link href="https://apps.shopify.com/desti-ai-automate-chatbot" className="flex items-center gap-2">
                       <Play size={16} />
-                      Try Full Demo
+                      Try Now
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="border-slate-300">
-                    <Link href="/book-demo" className="flex items-center gap-2">
+                    <Link href="/demo-form" className="flex items-center gap-2">
                       Book Live Demo
                       <ArrowRight size={16} />
                     </Link>
