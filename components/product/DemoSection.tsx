@@ -84,7 +84,9 @@ const DemoSection = () => {
               {/* Demo Description */}
               <div className="order-1 lg:order-2">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                  Interactive Product Demo
+                  <a href="https://apps.shopify.com/desti-ai-automate-chatbot" className="hover:underline">
+                    Explore Product
+                  </a>
                 </h3>
                 
                 <div className="space-y-4 mb-8">
