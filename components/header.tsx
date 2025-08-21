@@ -4,14 +4,42 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
+import * as React from "react"
+import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Product", href: "/product" },
-  { name: "Solutions", href: "/solutions" },
   { name: "Pricing", href: "/pricing" },
   { name: "Blog", href: "/blog" },
   { name: "Collaborate", href: "/collaborate" },
+];
+
+const industries = [
+  {
+    title: "Cosmetics",
+    href: "/industries/cosmetics",
+    description: "AI solutions for the cosmetics industry.",
+  },
+  {
+    title: "Jewelry",
+    href: "/industries/jewelry",
+    description: "AI solutions for the jewelry industry.",
+  },
+  {
+    title: "Apparels",
+    href: "/industries/apparels",
+    description: "AI solutions for the apparels industry.",
+  },
 ];
 
 export function Header() {
@@ -27,9 +55,7 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className="fixed top-0 w-full z-50 bg-white shadow-lg border-b border-slate-200/80"
-    >
+    <header className="fixed top-0 w-full z-50 bg-white shadow-lg border-b border-slate-200/80">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -46,21 +72,37 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav
-            className="hidden lg:flex items-center space-x-8"
-            role="navigation"
-            aria-label="Main navigation"
-          >
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-slate-700 hover:text-[#FF7626] font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#FF7626] focus:ring-offset-2 rounded-md px-2 py-1"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList>
+              {navigation.map((item) => (
+                <NavigationMenuItem key={item.name}>
+                  <Link href={item.href} legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      {item.name}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              ))}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {industries.map((industry) => (
+                      <ListItem
+                        key={industry.title}
+                        title={industry.title}
+                        href={industry.href}
+                      >
+                        {industry.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-3">
@@ -101,6 +143,21 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
+                  <div className="flex flex-col space-y-2">
+                    <span className="text-slate-700 font-medium text-lg px-2 py-2">
+                      Industries
+                    </span>
+                    {industries.map((industry) => (
+                      <Link
+                        key={industry.title}
+                        href={industry.href}
+                        className="text-slate-600 hover:text-[#FF7626] pl-6 py-1"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {industry.title}
+                      </Link>
+                    ))}
+                  </div>
                 </nav>
                 <div className="flex flex-col space-y-3 pt-6 border-t border-slate-200">
                   <Button
@@ -129,3 +186,29 @@ export function Header() {
     </header>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
