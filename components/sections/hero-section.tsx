@@ -28,7 +28,7 @@ export function HeroSection() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                 AI Chatbots For{" "}
                 <span className="text-[#FF7626] relative">
-                  Product
+                  Ecommerce Product
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-[#FF7626]/20"
                     viewBox="0 0 100 10"
