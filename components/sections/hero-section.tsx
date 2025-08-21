@@ -28,7 +28,7 @@ export function HeroSection() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                 AI Chatbots For{" "}
                 <span className="text-[#FF7626] relative">
-                  product
+                  Product
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-[#FF7626]/20"
                     viewBox="0 0 100 10"
@@ -37,7 +37,7 @@ export function HeroSection() {
                     <path d="M0,8 Q50,0 100,8 L100,10 L0,10 Z" />
                   </svg>
                 </span>
-                recommendation
+                Recommendation
               </h1>
 
               <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
