@@ -5,87 +5,58 @@ import Link from 'next/link';
 const PricingTiers = () => {
   const plans = [
     {
-      name: 'Starter',
-      description: 'Perfect for small stores testing AI recommendations',
-      price: '$299',
-      period: 'per month',
-      yearlyPrice: '$2,390',
-      conversations: '5,000',
+      name: 'Forever Free',
+      description: 'Unlock the power of AI at no cost, perfect for getting started.',
+      price: 'Free',
+      period: '',
+      yearlyPrice: null,
+      conversations: 'Unlimited',
       features: [
-        'Website widget integration',
-        'Basic product recommendations',
-        'Email support',
-        'Standard analytics dashboard',
-        'Up to 10,000 products',
-        '2 team members',
-        'Basic customization'
+        'Unlimited AI Product Sync',
+        'Unlimited Knowledge Train',
+        'Require to setup openAI Key & database'
       ],
-      cta: 'Start Free Trial',
+      cta: 'Start Free',
       popular: false
     },
     {
-      name: 'Growth',
-      description: 'Best for growing eCommerce businesses',
-      price: '$699',
-      period: 'per month',
-      yearlyPrice: '$5,592',
-      conversations: '25,000',
+      name: 'Starter',
+      description: 'Ideal for growing businesses looking to expand their AI capabilities.',
+      price: '$9',
+      period: '/ month',
+      yearlyPrice: null, // User did not provide yearly price, so keeping it null
+      conversations: 'Unlimited', // Based on "Unlimited AI chats"
       features: [
-        'Everything in Starter',
-        'WhatsApp & Messenger integration',
-        'Advanced personalization',
-        'A/B testing framework',
-        'Priority support',
-        'Up to 100,000 products',
-        '10 team members',
-        'Custom branding',
-        'Advanced analytics',
-        'Customer segmentation'
+        'Train up to 5,000 products (auto-sync)',
+        'Unlimited AI chats',
+        'Learns FAQs, policies, files, Website',
+        'Remove “Destinova AI” branding',
+        'Third Party Integration',
+        'Product Page AI Summery popup & Upsell',
+        'Access to all future AI features',
+        '14-day free trial'
       ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
-      name: 'Scale',
-      description: 'For high-volume retailers and enterprises',
-      price: '$1,499',
-      period: 'per month',
-      yearlyPrice: '$11,992',
-      conversations: '100,000',
+      name: 'Growth',
+      description: 'Comprehensive features for established businesses with advanced needs.',
+      price: '$29',
+      period: '/ month',
+      yearlyPrice: null, // User did not provide yearly price, so keeping it null
+      conversations: 'Unlimited', // Inherited from Starter, assuming it's unlimited
       features: [
-        'Everything in Growth',
-        'Omnichannel deployment',
-        'Custom AI training',
-        'Dedicated success manager',
-        'White-label options',
-        'Unlimited products',
-        'Unlimited team members',
-        'API access',
-        'Advanced integrations',
-        'Custom reporting',
-        'SLA guarantee'
+        'Everything in Starter, plus',
+        'Train up to 15,000 products',
+        'Learns from discount & chat history',
+        'Priority customer support',
+        'Real-time AI sales pop-ups',
+        'integration with meta & custom API',
+        'Support for headless storefronts',
+        '14-day free trial'
       ],
-      cta: 'Contact Sales',
-      popular: false
-    },
-    {
-      name: 'Enterprise',
-      description: 'Custom solutions for large-scale operations',
-      price: 'Custom',
-      period: 'pricing',
-      conversations: 'Unlimited',
-      features: [
-        'Everything in Scale',
-        'On-premise deployment options',
-        'Custom AI model development',
-        '24/7 phone support',
-        'Dedicated infrastructure',
-        'Security & compliance reviews',
-        'Custom integrations',
-        'Training & workshops',
-        'Multi-brand management'
-      ],
-      cta: 'Contact Sales',
+      cta: 'Start Free Trial',
       popular: false
     }
   ];
@@ -102,13 +73,13 @@ const PricingTiers = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}
               className={`relative p-8 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg ${
-                plan.popular 
-                  ? 'border-[#FF7626] bg-[#FF7626]/5 hover:bg-[#FF7626]/10' 
+                plan.popular
+                  ? 'border-[#FF7626] bg-[#FF7626]/5 hover:bg-[#FF7626]/10'
                   : 'border-slate-200 bg-white hover:border-slate-300'
               }`}
             >
@@ -128,7 +99,7 @@ const PricingTiers = () => {
                 <p className="text-slate-600 text-sm mb-6">
                   {plan.description}
                 </p>
-                
+
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-slate-900">
                     {plan.price}
@@ -160,15 +131,15 @@ const PricingTiers = () => {
                 ))}
               </ul>
 
-              <Button 
-                asChild 
+              <Button
+                asChild
                 className={`w-full ${
-                  plan.popular 
-                    ? 'bg-[#FF7626] hover:bg-[#e6651f] text-white' 
+                  plan.popular
+                    ? 'bg-[#FF7626] hover:bg-[#e6651f] text-white'
                     : 'bg-slate-900 hover:bg-slate-800 text-white'
                 }`}
               >
-                <Link 
+                <Link
                   href={plan.cta === 'Contact Sales' ? '/contact' : 'https://apps.shopify.com/desti-ai-automate-chatbot'}
                   className="flex items-center justify-center gap-2"
                 >

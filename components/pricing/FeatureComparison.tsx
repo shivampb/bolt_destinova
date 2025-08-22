@@ -3,52 +3,40 @@ import { Check, X } from 'lucide-react';
 const FeatureComparison = () => {
   const features = [
     {
-      category: 'Core Features',
+      category: 'Core Functionality',
       items: [
-        { name: 'Website Widget Integration', starter: true, growth: true, scale: true, enterprise: true },
-        { name: 'Basic Product Recommendations', starter: true, growth: true, scale: true, enterprise: true },
-        { name: 'Natural Language Processing', starter: true, growth: true, scale: true, enterprise: true },
-        { name: 'WhatsApp & Messenger Integration', starter: false, growth: true, scale: true, enterprise: true },
-        { name: 'Advanced Personalization', starter: false, growth: true, scale: true, enterprise: true },
-        { name: 'Omnichannel Deployment', starter: false, growth: false, scale: true, enterprise: true },
+        { name: 'Unlimited AI Product Sync', foreverFree: true, starter: true, growth: true },
+        { name: 'Unlimited Knowledge Train', foreverFree: true, starter: true, growth: true },
+        { name: 'Require to setup openAI Key & database', foreverFree: true, starter: false, growth: false },
+        { name: 'Train up to 5,000 products (auto-sync)', foreverFree: false, starter: true, growth: true },
+        { name: 'Unlimited AI chats', foreverFree: false, starter: true, growth: true },
+        { name: 'Learns FAQs, policies, files, Website', foreverFree: false, starter: true, growth: true },
+        { name: 'Remove “Destinova AI” branding', foreverFree: false, starter: true, growth: true },
+        { name: 'Third Party Integration', foreverFree: false, starter: true, growth: true },
+        { name: 'Product Page AI Summery popup & Upsell', foreverFree: false, starter: true, growth: true },
+        { name: 'Access to all future AI features', foreverFree: false, starter: true, growth: true },
       ]
     },
     {
-      category: 'Analytics & Optimization',
+      category: 'Advanced Capabilities',
       items: [
-        { name: 'Standard Analytics Dashboard', starter: true, growth: true, scale: true, enterprise: true },
-        { name: 'Advanced Analytics', starter: false, growth: true, scale: true, enterprise: true },
-        { name: 'A/B Testing Framework', starter: false, growth: true, scale: true, enterprise: true },
-        { name: 'Customer Segmentation', starter: false, growth: true, scale: true, enterprise: true },
-        { name: 'Custom Reporting', starter: false, growth: false, scale: true, enterprise: true },
-        { name: 'Real-time Performance Monitoring', starter: false, growth: false, scale: true, enterprise: true },
+        { name: 'Train up to 15,000 products', foreverFree: false, starter: false, growth: true },
+        { name: 'Learns from discount & chat history', foreverFree: false, starter: false, growth: true },
+        { name: 'Real-time AI sales pop-ups', foreverFree: false, starter: false, growth: true },
+        { name: 'Integration with Meta & Custom API', foreverFree: false, starter: false, growth: true },
+        { name: 'Support for headless storefronts', foreverFree: false, starter: false, growth: true },
       ]
     },
     {
-      category: 'Customization & Integration',
+      category: 'Support & Trials',
       items: [
-        { name: 'Basic Customization', starter: true, growth: true, scale: true, enterprise: true },
-        { name: 'Custom Branding', starter: false, growth: true, scale: true, enterprise: true },
-        { name: 'API Access', starter: false, growth: false, scale: true, enterprise: true },
-        { name: 'Advanced Integrations', starter: false, growth: false, scale: true, enterprise: true },
-        { name: 'White-label Options', starter: false, growth: false, scale: true, enterprise: true },
-        { name: 'Custom AI Training', starter: false, growth: false, scale: true, enterprise: true },
-      ]
-    },
-    {
-      category: 'Support & Security',
-      items: [
-        { name: 'Email Support', starter: true, growth: true, scale: true, enterprise: true },
-        { name: 'Priority Support', starter: false, growth: true, scale: true, enterprise: true },
-        { name: 'Dedicated Success Manager', starter: false, growth: false, scale: true, enterprise: true },
-        { name: '24/7 Phone Support', starter: false, growth: false, scale: false, enterprise: true },
-        { name: 'SLA Guarantee', starter: false, growth: false, scale: true, enterprise: true },
-        { name: 'Security & Compliance Reviews', starter: false, growth: false, scale: false, enterprise: true },
+        { name: '14-day free trial', foreverFree: false, starter: true, growth: true },
+        { name: 'Priority customer support', foreverFree: false, starter: false, growth: true },
       ]
     }
   ];
 
-  const plans = ['Starter', 'Growth', 'Scale', 'Enterprise'];
+  const plans = ['Forever Free', 'Starter', 'Growth'];
 
   return (
     <section className="py-20 bg-slate-50">
@@ -80,7 +68,7 @@ const FeatureComparison = () => {
               {features.map((category, categoryIndex) => (
                 <>
                   <tr key={`category-${categoryIndex}`}>
-                    <td colSpan={5} className="bg-slate-100 p-4 font-semibold text-slate-900 text-sm uppercase tracking-wide">
+                    <td colSpan={plans.length + 1} className="bg-slate-100 p-4 font-semibold text-slate-900 text-sm uppercase tracking-wide">
                       {category.category}
                     </td>
                   </tr>
@@ -88,6 +76,13 @@ const FeatureComparison = () => {
                     <tr key={`feature-${categoryIndex}-${featureIndex}`} className="border-t border-slate-200">
                       <td className="p-4 text-slate-700 font-medium">
                         {feature.name}
+                      </td>
+                      <td className="p-4 text-center">
+                        {feature.foreverFree ? (
+                          <Check size={20} className="text-green-500 mx-auto" />
+                        ) : (
+                          <X size={20} className="text-slate-300 mx-auto" />
+                        )}
                       </td>
                       <td className="p-4 text-center">
                         {feature.starter ? (
@@ -98,20 +93,6 @@ const FeatureComparison = () => {
                       </td>
                       <td className="p-4 text-center">
                         {feature.growth ? (
-                          <Check size={20} className="text-green-500 mx-auto" />
-                        ) : (
-                          <X size={20} className="text-slate-300 mx-auto" />
-                        )}
-                      </td>
-                      <td className="p-4 text-center">
-                        {feature.scale ? (
-                          <Check size={20} className="text-green-500 mx-auto" />
-                        ) : (
-                          <X size={20} className="text-slate-300 mx-auto" />
-                        )}
-                      </td>
-                      <td className="p-4 text-center">
-                        {feature.enterprise ? (
                           <Check size={20} className="text-green-500 mx-auto" />
                         ) : (
                           <X size={20} className="text-slate-300 mx-auto" />
