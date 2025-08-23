@@ -31,9 +31,9 @@ const industries = [
     description: "AI solutions for the cosmetics industry.",
   },
   {
-    title: "Jewelry",
-    href: "/industries/jewelry",
-    description: "AI solutions for the jewelry industry.",
+    title: "jewellery",
+    href: "/industries/jewellery",
+    description: "AI solutions for the jewellery industry.",
   },
   {
     title: "Apparels",
