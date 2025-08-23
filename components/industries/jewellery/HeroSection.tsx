@@ -48,7 +48,7 @@ const HeroSection = () => {
               size="lg"
               className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-300 hover:to-yellow-500 text-black text-lg px-10 py-4 h-auto rounded-2xl shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 hover:scale-105 font-semibold"
             >
-              <Link href="/book-demo" className="flex items-center gap-3">
+              <Link href="/demo-form" className="flex items-center gap-3">
                 See a Demo
                 <ArrowRight size={20} />
               </Link>

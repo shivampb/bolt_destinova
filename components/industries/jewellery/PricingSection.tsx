@@ -5,55 +5,74 @@ import Link from "next/link";
 const PricingSection = () => {
   const plans = [
     {
-      name: "Starter",
+      name: "Forever Free",
       description:
-        "Perfect for small jewellery stores testing AI recommendations",
-      price: "$399",
-      period: "per month",
+        "Unlock the power of AI at no cost, perfect for getting started.",
+      price: "Free",
+      period: "",
       features: [
-        "Style quiz integration",
-        "Basic product recommendations",
-        "Up to 5,000 products",
-        "Email support",
-        "Standard analytics",
-        "Mobile responsive",
+        "Unlimited conversations/month",
+        "Unlimited AI Product Sync",
+        "Unlimited Knowledge Train",
+        "Require to setup openAI Key & database",
       ],
-      cta: "Start Free Trial",
+      cta: "Start Free",
       popular: false,
     },
     {
-      name: "Growth",
-      description: "Best for growing jewellery businesses",
-      price: "$899",
-      period: "per month",
+      name: "Starter",
+      description:
+        "Ideal for growing businesses looking to expand their AI capabilities.",
+      price: "$9",
+      period: "/ month",
       features: [
-        "Everything in Starter",
-        "Occasion-based recommendations",
-        "Complete set matching engine",
-        "Advanced analytics dashboard",
-        "A/B testing framework",
-        "Priority support",
-        "Custom branding",
-        "Up to 50,000 products",
+        "Unlimited conversations/month",
+        "Train up to 5,000 products (auto-sync)",
+        "Unlimited AI chats",
+        "Learns FAQs, policies, files, Website",
+        "Remove “Destinova AI” branding",
+        "Third Party Integration",
+        "Product Page AI Summery popup & Upsell",
+        "Access to all future AI features",
+        "14-day free trial",
       ],
       cta: "Start Free Trial",
       popular: true,
     },
     {
-      name: "Enterprise",
-      description: "Full personalization suite for luxury brands",
-      price: "Custom",
-      period: "pricing",
+      name: "Growth",
+      description:
+        "Comprehensive features for established businesses with advanced needs.",
+      price: "$29",
+      period: "/ month",
       features: [
-        "Everything in Growth",
-        "Dedicated success manager",
-        "Custom AI training",
-        "White-label options",
-        "API access",
-        "Unlimited products",
-        "Multi-brand management",
+        "Unlimited conversations/month",
+        "Everything in Starter, plus",
+        "Train up to 15,000 products",
+        "Learns from discount & chat history",
+        "Priority customer support",
+        "Real-time AI sales pop-ups",
+        "integration with meta & custom API",
+        "Support for headless storefronts",
+        "14-day free trial",
+      ],
+      cta: "Start Free Trial",
+      popular: false,
+    },
+    {
+      name: "White Label",
+      description:
+        "For agencies and large enterprises needing a fully branded solution.",
+      price: "Custom",
+      period: "",
+      features: [
+        "All Growth features",
+        "Full white-label branding",
+        "Dedicated infrastructure",
+        "SLA and priority support",
         "Custom integrations",
-        "SLA guarantee",
+        "Account management",
+        "On-premise deployment options",
       ],
       cta: "Contact Sales",
       popular: false,
@@ -71,16 +90,15 @@ const PricingSection = () => {
             </span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Choose the perfect plan for your jewellery business. All plans
-            include a 14-day free trial with no setup fees.
+            Choose the perfect plan for your jewellery business.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-stretch">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative p-8 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg ${
+              className={`relative p-8 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg flex flex-col h-full ${
                 plan.popular
                   ? "border-yellow-500 bg-yellow-50/50 hover:bg-yellow-50"
                   : "border-slate-200 bg-white hover:border-slate-300"
@@ -111,7 +129,7 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 flex-grow">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
                     <Check
@@ -132,9 +150,7 @@ const PricingSection = () => {
                 }`}
               >
                 <Link
-                  href={
-                    plan.cta === "Contact Sales" ? "/contact" : "/book-demo"
-                  }
+                  href={plan.cta === 'Contact Sales' ? '/demo-form' : 'https://apps.shopify.com/desti-ai-automate-chatbot'}
                   className="flex items-center justify-center gap-2"
                 >
                   {plan.cta}
@@ -147,7 +163,7 @@ const PricingSection = () => {
 
         <div className="text-center mt-12">
           <p className="text-slate-600 mb-4">
-            All plans include 14-day free trial • No setup fees • Cancel anytime
+            Some plans include a 14-day free trial. Setup fees may apply for certain configurations.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
             <span>✓ SOC 2 Certified</span>

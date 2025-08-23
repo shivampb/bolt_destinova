@@ -54,8 +54,7 @@ const DemoSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Try It Live:{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-800">
+              Try It Live:{' '}<span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-800">
                 AI Recommendations
               </span>
             </h2>
@@ -169,7 +168,7 @@ const DemoSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-gradient-to-r from-yellow-500 to-yellow-700 hover:from-yellow-400 hover:to-yellow-600 text-white">
-                <a href="/book-demo" className="flex items-center gap-2">
+                <a href="/demo-form" className="flex items-center gap-2">
                   Book Full Demo
                   <ArrowRight size={16} />
                 </a>

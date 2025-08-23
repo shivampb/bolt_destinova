@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState } from "react";
+import Link from "next/link";
 
 const UseCasesSection = () => {
   const [selectedOccasion, setSelectedOccasion] = useState("");
@@ -17,7 +18,8 @@ const UseCasesSection = () => {
   const [showRecommendations, setShowRecommendations] = useState(false);
 
   const handleTryDemo = () => {
-    setShowRecommendations(true);
+    // This button will now redirect, so no need to set showRecommendations locally
+    // setShowRecommendations(true);
   };
 
   const getRecommendations = () => {
@@ -216,56 +218,19 @@ const UseCasesSection = () => {
 
           <div className="text-center mb-8">
             <Button
-              onClick={handleTryDemo}
+              asChild
               disabled={!selectedOccasion || !selectedStyle}
               className="bg-gradient-to-r from-yellow-500 to-yellow-700 hover:from-yellow-400 hover:to-yellow-600 text-white px-8 py-3"
             >
-              <Sparkles size={20} className="mr-2" />
-              Generate Recommendations
+              <Link href="/demo-form" className="flex items-center gap-2">
+                <Sparkles size={20} className="mr-2" />
+                Generate Recommendations
+              </Link>
             </Button>
           </div>
 
           {/* Demo Results */}
-          {showRecommendations && (
-            <div className="bg-white rounded-xl p-6 border border-slate-200">
-              <h4 className="text-lg font-semibold text-slate-900 mb-4">
-                {getRecommendations().title}
-              </h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {getRecommendations().items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="text-center p-4 bg-slate-50 rounded-lg"
-                  >
-                    <div className="w-full h-20 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg mb-3 flex items-center justify-center">
-                      {index === 0 && (
-                        <Crown size={24} className="text-yellow-600" />
-                      )}
-                      {index === 1 && (
-                        <Heart size={24} className="text-yellow-600" />
-                      )}
-                      {index === 2 && (
-                        <Sparkles size={24} className="text-yellow-600" />
-                      )}
-                    </div>
-                    <h5 className="font-medium text-slate-900 mb-1">
-                      {item.name}
-                    </h5>
-                    <p className="text-xs text-slate-600 mb-2">
-                      {item.description}
-                    </p>
-                    <p className="text-yellow-600 font-bold">{item.price}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-sm text-green-600 font-medium">
-                  ✨ Perfect coordination! This set matches your {selectedStyle}{" "}
-                  style for {selectedOccasion} occasions.
-                </p>
-              </div>
-            </div>
-          )}
+          {/* Removed the in-page demo results as the button now redirects */}
         </div>
       </div>
     </section>
