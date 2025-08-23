@@ -1,118 +1,148 @@
-import { MessageCircle, ArrowRight } from 'lucide-react';
+import { Quote, Star, ArrowRight, TrendingUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const CaseStudySection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+    <section className="py-20 bg-slate-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Real Customer{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
-                Success Story
-              </span>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Story</span>
             </h2>
-            <p className="text-xl text-gray-600">
-              See how our AI transforms the beauty shopping experience
+            <p className="text-xl text-slate-300">
+              How DermaCare increased revenue by 28% with AI-powered skincare recommendations
             </p>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-pink-200/50 overflow-hidden">
-            <div className="p-8 lg:p-12">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <MessageCircle size={24} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Beauty AI Assistant</h3>
-                  <p className="text-gray-600 text-sm">Personalized Lipstick Consultation</p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                {/* Customer Message */}
-                <div className="flex justify-end">
-                  <div className="max-w-md bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 rounded-2xl rounded-br-md">
-                    <p className="text-sm">
-                      "Hi! I'm looking for a long-lasting lipstick for my wedding. I have warm undertones and prefer matte finishes. Any recommendations?"
-                    </p>
+          {/* Case Study Card */}
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-slate-700/50">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Story Content */}
+              <div>
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-xl flex items-center justify-center">
+                    <Quote size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold">DermaCare</h3>
+                    <p className="text-slate-400">Premium Skincare Brand</p>
                   </div>
                 </div>
 
-                {/* AI Response */}
-                <div className="flex justify-start">
-                  <div className="max-w-lg bg-gray-100 p-4 rounded-2xl rounded-bl-md">
-                    <p className="text-sm text-gray-800 mb-4">
-                      "Congratulations on your upcoming wedding! 💕 Based on your warm undertones and preference for matte finishes, I have perfect recommendations for you."
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold text-pink-400 mb-3">The Challenge:</h4>
+                    <p className="text-slate-300 leading-relaxed">
+                      DermaCare had a comprehensive skincare line but customers were confused about which products to use together. 
+                      High return rates and low customer satisfaction were impacting growth.
                     </p>
-                    
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div className="bg-white p-3 rounded-lg border border-pink-200">
-                        <div className="w-full h-16 bg-gradient-to-r from-rose-300 to-pink-400 rounded mb-2"></div>
-                        <p className="text-xs font-medium text-gray-900">Bridal Rose Matte</p>
-                        <p className="text-xs text-pink-600">Perfect for warm tones</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-pink-400 mb-3">The AI Solution:</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <div className="w-6 h-6 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-black text-xs font-bold">1</span>
+                        </div>
+                        <p className="text-slate-300">Implemented comprehensive skin analysis questionnaire</p>
                       </div>
-                      <div className="bg-white p-3 rounded-lg border border-pink-200">
-                        <div className="w-full h-16 bg-gradient-to-r from-red-400 to-rose-500 rounded mb-2"></div>
-                        <p className="text-xs font-medium text-gray-900">Classic Red Velvet</p>
-                        <p className="text-xs text-pink-600">Long-lasting formula</p>
+                      <div className="flex items-start gap-3">
+                        <div className="w-6 h-6 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-black text-xs font-bold">2</span>
+                        </div>
+                        <p className="text-slate-300">Added AI-powered routine builder for personalized skincare regimens</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-6 h-6 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-black text-xs font-bold">3</span>
+                        </div>
+                        <p className="text-slate-300">Integrated smart bundling for complete skincare solutions</p>
                       </div>
                     </div>
-
-                    <p className="text-sm text-gray-800">
-                      "Both shades complement warm undertones beautifully and offer 12+ hour wear. Would you like to see application tips or explore matching lip liners?"
-                    </p>
-                  </div>
-                </div>
-
-                {/* Follow-up */}
-                <div className="flex justify-end">
-                  <div className="max-w-md bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 rounded-2xl rounded-br-md">
-                    <p className="text-sm">
-                      "The Bridal Rose looks perfect! Can you show me the matching lip liner and suggest a complementary blush?"
-                    </p>
-                  </div>
-                </div>
-
-                {/* Final AI Response */}
-                <div className="flex justify-start">
-                  <div className="max-w-lg bg-gray-100 p-4 rounded-2xl rounded-bl-md">
-                    <p className="text-sm text-gray-800">
-                      "Excellent choice! I've added the matching lip liner to your cart. For blush, I recommend our 'Warm Peach Glow' - it will create a beautiful, cohesive bridal look. 
-                      <br/><br/>
-                      💄 <strong>Your Wedding Look Bundle:</strong> Bridal Rose Matte Lipstick + Matching Liner + Warm Peach Blush
-                      <br/>
-                      <strong>Total: $89</strong> (Save $15 with bundle discount!)"
-                    </p>
                   </div>
                 </div>
               </div>
 
               {/* Results */}
-              <div className="mt-8 p-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl border border-pink-200/50">
-                <h4 className="font-semibold text-gray-900 mb-4">Results from this interaction:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
-                      3x
+              <div>
+                <div className="bg-gradient-to-r from-green-900/30 to-green-800/30 rounded-xl p-6 border border-green-700/30 mb-8">
+                  <h4 className="text-lg font-semibold text-green-400 mb-4">The Results:</h4>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-pink-400 mb-1">+28%</div>
+                      <div className="text-slate-300 text-sm">Revenue Growth</div>
                     </div>
-                    <p className="text-sm text-gray-600">Higher AOV with bundle</p>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-pink-400 mb-1">+35%</div>
+                      <div className="text-slate-300 text-sm">Average Order Value</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-pink-400 mb-1">-45%</div>
+                      <div className="text-slate-300 text-sm">Return Rate</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-pink-400 mb-1">+60%</div>
+                      <div className="text-slate-300 text-sm">Customer Satisfaction</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
-                      95%
+
+                  <blockquote className="text-slate-300 italic">
+                    "Our customers finally understand which products work best for their skin. The AI recommendations have transformed our business and customer relationships."
+                  </blockquote>
+                  <footer className="text-slate-400 mt-3">
+                    — Sarah Johnson, Founder & CEO
+                  </footer>
+                </div>
+
+                {/* Customer Journey */}
+                <div className="bg-slate-800/80 rounded-xl p-6">
+                  <h4 className="text-lg font-semibold text-pink-400 mb-4">Customer Journey:</h4>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-pink-400/20 rounded-full flex items-center justify-center">
+                        <span className="text-pink-400 font-bold">1</span>
+                      </div>
+                      <span className="text-slate-300">Customer visits website with skin concerns</span>
                     </div>
-                    <p className="text-sm text-gray-600">Customer satisfaction</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
-                      2min
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-pink-400/20 rounded-full flex items-center justify-center">
+                        <span className="text-pink-400 font-bold">2</span>
+                      </div>
+                      <span className="text-slate-300">Completes skin analysis: Dry + Sensitive + Anti-aging</span>
                     </div>
-                    <p className="text-sm text-gray-600">Time to purchase</p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-pink-400/20 rounded-full flex items-center justify-center">
+                        <span className="text-pink-400 font-bold">3</span>
+                      </div>
+                      <span className="text-slate-300">AI creates personalized 4-step routine</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-400/20 rounded-full flex items-center justify-center">
+                        <span className="text-green-400 font-bold">✓</span>
+                      </div>
+                      <span className="text-slate-300">Purchases complete routine bundle worth $120</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-gradient-to-r from-pink-400 to-purple-400 hover:from-pink-300 hover:to-purple-300 text-white font-semibold"
+            >
+              <Link href="/case-studies" className="flex items-center gap-2">
+                View More Success Stories
+                <ArrowRight size={20} />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
