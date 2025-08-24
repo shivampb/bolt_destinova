@@ -8,6 +8,7 @@ import DemoSection from '@/components/industries/cosmetics/DemoSection';
 import UseCasesSection from '@/components/industries/cosmetics/UseCasesSection';
 import CaseStudySection from '@/components/industries/cosmetics/CaseStudySection';
 import IntegrationSection from '@/components/industries/cosmetics/IntegrationSection';
+import PricingSection from '@/components/industries/cosmetics/PricingSection';
 import FAQSection from '@/components/industries/cosmetics/FAQSection';
 import FinalCTASection from '@/components/industries/cosmetics/FinalCTASection';
 
@@ -29,6 +30,7 @@ export default function CosmeticsIndustryPage() {
       <UseCasesSection />
       <CaseStudySection />
       <IntegrationSection />
+      <PricingSection />
       <FAQSection />
       <FinalCTASection />
     </>
