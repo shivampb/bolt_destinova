@@ -22,6 +22,7 @@ const navigation = [
   { name: "Pricing", href: "/pricing" },
   { name: "Blog", href: "/blog" },
   { name: "Collaborate", href: "/collaborate" },
+  { name: "About Us", href: "/about" },
 ];
 
 const industries = [
