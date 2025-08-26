@@ -22,19 +22,19 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://destinova-ai.com'),
   alternates: {
-    canonical: '/',
+    canonical: '/about',
   },
   openGraph: {
-    title: 'Destinova AI Labs | AI Chatbots for eCommerce Product Recommendations',
-    description: 'Boost eCommerce conversions with agentic AI chatbots that provide personalized product recommendations.',
-    url: 'https://destinova-ai.com',
+    title: 'About Us | Destinova AI Labs - Building the Future of AI in Digital Commerce',
+    description: 'Learn about Destinova AI Labs\' journey, mission, values, and the team behind our AI-powered solutions for eCommerce, including chatbots and product recommendations.',
+    url: 'https://destinova-ai.com/about',
     siteName: 'Destinova AI Labs',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://destinova-ai.com/og-image-about.jpg', // Consider a specific OG image for About page
         width: 1200,
         height: 630,
-        alt: 'Destinova AI Labs - AI Chatbots for eCommerce',
+        alt: 'Destinova AI Labs About Us',
       },
     ],
     locale: 'en_US',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Destinova AI Labs | AI Chatbots for eCommerce Product Recommendations',
-    description: 'Boost eCommerce conversions with agentic AI chatbots that provide personalized product recommendations.',
-    images: ['/twitter-image.jpg'],
+    title: 'About Us | Destinova AI Labs - Building the Future of AI in Digital Commerce',
+    description: 'Learn about Destinova AI Labs\' journey, mission, values, and the team behind our AI-powered solutions.',
+    images: ['https://destinova-ai.com/twitter-image-about.jpg'], // Consider a specific Twitter image for About page
   },
   robots: {
     index: true,
